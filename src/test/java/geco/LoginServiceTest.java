@@ -17,17 +17,22 @@ public class LoginServiceTest {
     public void testAddLogin() throws Exception {
         String[] s = {"liste"};
         LoginService test = new LoginService(s);
+        String l = "login";
+        test.addLogin(l);
     }
 
     @Test
     public void testFindAllLoginsStartingWith() throws Exception {
         String[] s = {"liste"};
         LoginService test = new LoginService(s);
+        String l = "login";
+        test.findAllLoginsStartingWith(l);
     }
 
     @Test
     public void testFindAllLogins() throws Exception {
         String[] s = {"liste"};
         LoginService test = new LoginService(s);
+        test.findAllLogins();
     }
 }
