@@ -2,6 +2,8 @@ package geco;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class LoginGeneratorTest {
 
     @Test
@@ -11,6 +13,7 @@ public class LoginGeneratorTest {
                 "CGUR", "JDUP", "JRAL", "JRAL1"});
         LoginGenerator lg = new LoginGenerator(test);
 
-
+        lg.generateLoginForNomAndPrenom("Paul", "Dupont");
+        assertEquals(test.loginExists("PDUP"), false);
     }
 }
